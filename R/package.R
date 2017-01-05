@@ -62,7 +62,7 @@ set_prompt <- function(value) {
 suspend <- function() {
   if (!prompt_env$in_use) return(invisible(FALSE))
   prompt_env$disabled_prompt <- prompt_env$prompt
-  prompt::set_prompt(prompt_env$default_prompt)
+  set_prompt(prompt_env$default_prompt)
   prompt_env$in_use <- FALSE
   invisible(TRUE)
 }
@@ -72,7 +72,7 @@ suspend <- function() {
 
 restore <- function() {
   if (prompt_env$in_use) return(invisible(FALSE))
-  prompt::set_prompt(prompt_env$disabled_prompt)
+  set_prompt(prompt_env$disabled_prompt)
   prompt_env$in_use <- TRUE
   invisible(TRUE)
 }
