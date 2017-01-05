@@ -40,12 +40,18 @@ update_prompt <- function(...) {
   if (is.string(mine)) options(prompt = mine)
 }
 
-#' Set the prompt
+#' Set and control the prompt
 #'
 #' @param value A character string for a static prompt, or
 #'   a function that is called after the evaluation every expression
 #'   typed at the R prompt. The function should always return a
 #'   character scalar.
+#'
+#' @details
+#' Function \code{update_prompt()} is used to replace the default \R
+#' prompt with a custom prompt.   A custom prompt can be disabled
+#' with \code{suspend()} and then re-enable with \code{restore()}.
+#' Function \code{toggle()} toggles between the two.
 #'
 #' @export
 

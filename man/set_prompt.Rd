@@ -5,7 +5,7 @@
 \alias{set_prompt}
 \alias{suspend}
 \alias{toggle}
-\title{Set the prompt}
+\title{Set and control the prompt}
 \usage{
 set_prompt(value)
 
@@ -22,6 +22,12 @@ typed at the R prompt. The function should always return a
 character scalar.}
 }
 \description{
-Set the prompt
+Set and control the prompt
+}
+\details{
+Function \code{update_prompt()} is used to replace the default \R
+prompt with a custom prompt.   A custom prompt can be disabled
+with \code{suspend()} and then re-enable with \code{restore()}.
+Function \code{toggle()} toggles between the two.
 }
 
