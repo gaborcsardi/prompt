@@ -11,6 +11,9 @@ prompt_env <- new.env()
 prompt_env$prompt <- "> "
 prompt_env$task_id <- NA
 prompt_env$error <- NULL
+prompt_env$default_prompt <- prompt_env$prompt
+prompt_env$disabled_prompt <- NULL
+prompt_env$in_use <- TRUE
 
 .onLoad <- function(libname, pkgname) {
   assign("task_id", addTaskCallback(update_callback), envir = prompt_env)
@@ -50,4 +53,33 @@ set_prompt <- function(value) {
   stopifnot(is.function(value) || is.string(value))
   assign("prompt", value, envir = prompt_env)
   update_prompt(NULL, NULL, TRUE, FALSE)
+}
+
+
+#' @rdname set_prompt
+#' @export
+
+suspend <- function() {
+  if (!prompt_env$in_use) return(invisible(FALSE))
+  prompt_env$disabled_prompt <- prompt_env$prompt
+  prompt::set_prompt(prompt_env$default_prompt)
+  prompt_env$in_use <- FALSE
+  invisible(TRUE)
+}
+
+#' @rdname set_prompt
+#' @export
+
+restore <- function() {
+  if (prompt_env$in_use) return(invisible(FALSE))
+  prompt::set_prompt(prompt_env$disabled_prompt)
+  prompt_env$in_use <- TRUE
+  invisible(TRUE)
+}
+
+#' @rdname set_prompt
+#' @export
+
+toggle <- function() {
+  if (prompt_env$in_use) suspend() else restore()
 }
