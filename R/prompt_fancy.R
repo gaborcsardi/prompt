@@ -48,8 +48,8 @@ prompt_fancy <- function(expr, value, ok, visible) {
 memory_usage <- function() {
   if (!requireNamespace("memuse", quietly = TRUE)) return("")
   current <- memuse::Sys.procmem()[[1]]
-  size <- memuse::size(current)
-  unit <- memuse::unit(current)
+  size <- memuse::mu.size(current)
+  unit <- memuse::mu.unit(current)
 
   paste0(round(size, 1), " ", unit)
 }

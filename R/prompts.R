@@ -58,8 +58,8 @@ prompt_memuse_factory <- function() {
 
   function(...) {
     current <- memuse::Sys.procmem()[[1]]
-    size <<- memuse::size(current)
-    unit <<- memuse::unit(current)
+    size <<- memuse::mu.size(current)
+    unit <<- memuse::mu.unit(current)
 
     paste0(round(size, 1), " ", unit, " ", symbol$pointer, " ")
   }
