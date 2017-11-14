@@ -12,7 +12,7 @@ RoxygenNote: 5.0.1
 Suggests:
     devtools,
     httrmock,
-    memuse,
+    memuse (>= 4.0.0),
     testthat
 Imports:
     clisymbols,
