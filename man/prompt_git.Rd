@@ -2,9 +2,18 @@
 % Please edit documentation in R/prompt-git.R
 \name{prompt_git}
 \alias{prompt_git}
+\alias{git_branch}
+\alias{git_arrows}
+\alias{git_dirty}
 \title{An example 'git' prompt}
 \usage{
 prompt_git(...)
+
+git_branch()
+
+git_arrows()
+
+git_dirty()
 }
 \arguments{
 \item{...}{Unused.}

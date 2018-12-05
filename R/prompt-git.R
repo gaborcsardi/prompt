@@ -33,12 +33,17 @@ is_git_dir <- function() {
 
 ## It fails before the first commit, so we just return "master" there
 
+#' @export
+#' @rdname prompt_git
+
 git_branch <- function() {
   status <- git("rev-parse --abbrev-ref HEAD")
   if (attr(status, "status") != 0) "master" else status
 }
 
 #' @importFrom clisymbols symbol
+#' @export
+#' @rdname prompt_git
 
 git_arrows <- function() {
   res <- ""
@@ -55,6 +60,9 @@ git_arrows <- function() {
   if (res != "") paste0(" ", res) else res
 }
 
+
+#' @export
+#' @rdname prompt_git
 
 git_dirty <- function() {
   status <- git("diff --no-ext-diff --quiet --exit-code")
