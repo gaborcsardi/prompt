@@ -1,5 +1,6 @@
-^.*\.Rproj$
+^prompt\.Rproj$
 ^\.Rproj\.user$
+^.*\.Rproj$
 ^Makefile$
 ^README.Rmd$
 ^.travis.yml$

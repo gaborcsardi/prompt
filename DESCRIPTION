@@ -8,7 +8,7 @@ License: MIT + file LICENSE
 LazyData: true
 URL: https://github.com/gaborcsardi/prompt
 BugReports: https://github.com/gaborcsardi/prompt/issues
-RoxygenNote: 5.0.1
+RoxygenNote: 6.1.1
 Suggests:
     devtools,
     httrmock,

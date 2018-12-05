@@ -20,8 +20,8 @@ and whether the working directory is dirty.
 }
 }
 \seealso{
-Other example.prompts: \code{\link{prompt_devtools}},
+Other example prompts: \code{\link{prompt_devtools}},
   \code{\link{prompt_error}}, \code{\link{prompt_fancy}},
   \code{\link{prompt_memuse}}, \code{\link{prompt_runtime}}
 }
-
+\concept{example prompts}

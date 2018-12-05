@@ -8,4 +8,3 @@
 \description{
 Set the R prompt dynamically, from a function.
 }
-
