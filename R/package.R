@@ -23,13 +23,7 @@ update_callback <- function(expr, value, ok, visible) {
 update_prompt <- function(...) {
   mine <- prompt_env$prompt
   if (is.function(mine)) mine <- mine(...)
-  if (is.string(mine)) {
-    # Colored prompts do not work with editline
-    if (grepl("^aarch64-apple", R.version$platform)) {
-      mine <- cli::ansi_strip(mine)
-    }
-    options(prompt = mine)
-  }
+  if (is.string(mine)) options(prompt = mine)
 }
 
 #' Set and control the prompt
@@ -58,7 +52,7 @@ set_prompt <- function(value) {
         error = function(err) update_callback(NA, NA, FALSE, NA) # nocov
       )
     }
-  }
+  }  
   update_prompt(NULL, NULL, TRUE, FALSE)
 
   invisible()
