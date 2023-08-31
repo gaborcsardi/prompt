@@ -4,8 +4,9 @@
 > Dynamic R Prompt
 
 <!-- badges: start -->
-[![Lifecycle Status](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-[![R build status](https://github.com/gaborcsardi/prompt/workflows/R-CMD-check/badge.svg)](https://github.com/gaborcsardi/prompt/actions)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![R-CMD-check](https://github.com/gaborcsardi/prompt/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gaborcsardi/prompt/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/gaborcsardi/prompt/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gaborcsardi/prompt?branch=main)
 <!-- badges: end -->
 
 Set the R prompt dynamically, from a function. The package contains some
