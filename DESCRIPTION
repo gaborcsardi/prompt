@@ -1,6 +1,6 @@
 Package: prompt
 Title: Dynamic 'R' Prompt
-Version: 1.0.1.9000
+Version: 1.0.2
 Author: Gábor Csárdi
 Maintainer: Gábor Csárdi <csardi.gabor@gmail.com>
 Description: Set the 'R' prompt dynamically, from a function. The package
