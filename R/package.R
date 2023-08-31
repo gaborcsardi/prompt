@@ -5,7 +5,7 @@
 #'
 #' @docType package
 #' @name prompt
-NULL
+"_PACKAGE"
 
 prompt_env <- new.env(parent = emptyenv())
 prompt_env$prompt <- "> "
