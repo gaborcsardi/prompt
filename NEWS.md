@@ -1,5 +1,6 @@
 # prompt (development version)
 
+No user visible changes.
 
 # 1.0.1
 
